@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import { onMount } from 'svelte';
-    import {createSmartappDebugger, createAssistant} from '@salutejs/client';
+    import {createSmartappDebugger, createAssistant} from '@sberdevices/assistant-client';
     import { setTheme } from './themes';
     import { logger } from "./utils";
     import {text,background,gradient} from '@salutejs/plasma-tokens'
@@ -1259,7 +1259,7 @@
 </div>
 
 
-    
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap%27');

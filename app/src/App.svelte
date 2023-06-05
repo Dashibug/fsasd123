@@ -1321,7 +1321,7 @@ img:hover,
           background: transparent;
 }
 
-.help-button:hover {
+.help-button:hover, .help-button:focus {
           color: #fff9;
           cursor: pointer;
 }
@@ -1426,10 +1426,14 @@ img:hover,
 
 .Good:hover,
 .Bad:hover,
-.NewWord:hover {
+.NewWord:hover, .Good:focus,
+.Bad:focus,
+.NewWord:focus {
           transform: translateY(2px);
           background-color: #388E5f;
 }
+
+
 
 .Good:active,
 .Bad:active,

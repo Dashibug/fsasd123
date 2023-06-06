@@ -1,7 +1,8 @@
 <script lang="ts">
 
     import { onMount } from 'svelte';
-    import {createSmartappDebugger, createAssistant} from '@sberdevices/assistant-client';
+    //import {createSmartappDebugger, createAssistant} from '@sberdevices/assistant-client';
+    import {createSmartappDebugger, createAssistant} from '@salutejs/client';
     import { setTheme } from './themes';
     import { logger } from "./utils";
     import {text,background,gradient} from '@salutejs/plasma-tokens'
@@ -1024,7 +1025,7 @@
     let rand = dict[Math.floor(Math.random() * dict.length)];
     let com = "Простой";
 
-    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJkNDE0Y2I1MC00NmFkLTQxYTEtYmMzNy1lNzI1NzgzMDkwMmUiLCJzdWIiOiI4NjNlZDFmOGI0ZDk0YTBiZDU1MmI4ZGE0ZDcyZjE5OGEwZDdjZDQ4MTY1YmExMGYxYTM1NjI5M2JlYjQxMzIyNTM5YmU5MjcwMDQyNjI5OCIsImlzcyI6IktFWU1BU1RFUiIsImV4cCI6MTY4NTg3NjkyNiwiYXVkIjoiVlBTIiwiaWF0IjoxNjg1NzkwNTE2LCJ0eXBlIjoiQmVhcmVyIiwic2lkIjoiYjliMjNhZDctN2U1OS00OWRjLTgzNjItNGM3ZDU1NDZkN2MwIn0.HsmPe1d2xCY8VQWWlWwAWaoGBY8xRnUrMIlYJzbiAG5F3IriYjeHbL1_gLknUz1NwtMkDrViX4sNHAFfrNoGrmCtsF8BzHfF_6skyS07G0XuCQM5cKBY2g7MGS9EJ1jvjdAcQ9bgBqITahO17auClS0Uijp6i0mafVFM4NsGD3kDeQPHI0DSLG987j4NaIUn3g5yC3FxUDcek9ETW_S_CjbywrbPEWeuUREK3ycXkHY70-XGNbaIXntbLoJPIvDnxBUh8X8-Qm1rqzpTur7qd42oyr7ho-8d7oQAIGECOW4HTRhp1aN-pm65TVPp94Ojz31ngli-RkeNnnHaAOekLOXmRSkxnUhC3WZLSc52N2BQgyZIIrAs6VDkqXsiGB4ATx4eXMQCBxj3_iAUXopMEhasyTzmTxSHUyOOPOXnDI5f93jRBsXbp-zh9NAlVnCtUPSzQNqaS8LzPuL6_4tVyL-_p1BCmUOLGel8FgNF8oh29E7pX9UM6OLb1bHzrqbokFHqLV3PFry-C3GhI9OLKZmve_6YKssZ7M2EGdwQNoz5fL4rpAPhbZHQentBeD1DMtR0DIP4CdRA8vhqd4LkfKOlOAPmQNNTq87xUG7a9P5FYWRrS4gfHyUDs5X6FlPaSge0SAbu5rKak_JnqQzwtKRjsnuSMFSyrhWo4sa9uig";
+    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJjNjQ1MzBiNy01NTI2LTRkNTctOTM2NC1lMTk0ODUxZmU2Y2UiLCJzdWIiOiI4NjNlZDFmOGI0ZDk0YTBiZDU1MmI4ZGE0ZDcyZjE5OGEwZDdjZDQ4MTY1YmExMGYxYTM1NjI5M2JlYjQxMzIyNTM5YmU5MjcwMDQyNjI5OCIsImlzcyI6IktFWU1BU1RFUiIsImV4cCI6MTY4NjE0ODI5MywiYXVkIjoiVlBTIiwiaWF0IjoxNjg2MDYxODgzLCJ0eXBlIjoiQmVhcmVyIiwic2lkIjoiOGQ4MmU5MmQtYzBjZC00MDFkLTlkYTctZTZlMzJjZTY1M2Y2In0.sz2JgqA8fbMUCluAbinTaLBNxePlQcP7p56-7piOgf8DW_t6Ml_LaZAJAs_vZNhUYlE8UgADn59VaP7z-g9MLV8RTys9PyJYSw-1xrvsH2NVptbIRan9OtjOCFEvV49A9ce8Vn8_c-w6Z_Fd7snqEZROS4gOHrPqirPW3QLcL2PqrIqjKZPLeYv5yNp_tY60Jju2QUM9idGazg7HYBJ_9tTZc6A8xp3FVVCtZwoyyiVpjzH-xGw1E8_V5nrqbUpq6zWQJ9azdw9sqmXjKwsbXlcYDbLbbc8tSk_YN6Y6h0-1OCY1v3-WdEvbtTfrGQbwz2CeTx8JfUnEljyfdrGK4WcpfQqpBRQb1KZ6rDg39AwtdnOXSqvhnPc5HbUiJnm13dT2Lwn_XVaqnyd_O5-JEr7DzqrwDEk0BSvehrW_8Rc65SwaDZS6fbPQtGh5OMNWQLzRkFn2VGtvXSxHR2EA1rZrxFxWLWemgl-6XR7PktGaBrXO-xT9Z8wTXlY6awwbP7GEyDyh9RjQDFehgF4_mqDuN2LE5ogNk0sHjQqggQW6Zu9I6JR7SS70pqts4jzAe7RY0_byF1DCx8Hn9UI-soKhiCxI1Yup43izg-orbnjyV7Wdai7kj_yFa4E7h4Lp5aZ4pNQAAc6UbI_4VnWRMT5LG7VLlQ9nnEPNK_5lAqk";
 // Set the name of your SmartApp for activation
     let initPhrase = 'запусти Английский крокодил';
     let character = 'eva'; // default, before sber client gets state
@@ -1110,7 +1111,7 @@
         });
     }
     const guessedright = () => {
-        if (visible && pressed_only_once) {
+        if (visible) {
         assistant.sendData({
             action: {
                 action_id: 'guessedright'
@@ -1119,7 +1120,7 @@
     }
     }
     const guessedwrong = () => {
-        if (visible && pressed_only_once) {
+        if (visible) {
         assistant.sendData({
             action: {
                 action_id: 'guessedwrong'
@@ -1146,24 +1147,24 @@
             dict = dictionary;
             rand = dict[Math.floor(Math.random() * dict.length)]
         }
-        if (visible && pressed_only_once) {
+        if (visible) {
             visible = false;
-            pressed_only_once = false;
+            //pressed_only_once = false;
             setTimeout(function() { visible = true;}, 1000);
-            setTimeout(function() { pressed_only_once = true;}, 3000);
+           // setTimeout(function() { pressed_only_once = true;}, 3000);
         }
         else {
             setTimeout(function() { visible = true; }, 500);
         }
     }
     function gcount() { 
-        if (pressed_only_once) {
+        // if (pressed_only_once) {
            game.best+=1; 
            game.score+=1; 
-        }
+       // }
     }
     function badcount() { 
-        if (pressed_only_once)
+        // if (pressed_only_once)
             game.best+=1; 
     }
     let visible = false;
@@ -1271,6 +1272,7 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: 75%;
+          overflow: hidden;
 }
 
 p {
@@ -1297,6 +1299,7 @@ img {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+
 .title {
           background: linear-gradient(to right, #FFCCFF, #fff);
           -webkit-background-clip: text;
@@ -1322,8 +1325,9 @@ img:hover,
 }
 
 .help-button:hover, .help-button:focus {
-          color: #fff9;
+          color: #000;
           cursor: pointer;
+          border: 1px solid #000;
 }
 
 .score-container,
@@ -1348,7 +1352,7 @@ img:hover,
 }
 
 .best-container {
-          left: calc(50% - 10%);
+          left: calc(50% - 11%);
 }
 
 .text-score .score-container, .text-score .best-container {
@@ -1402,11 +1406,12 @@ img:hover,
           text-align: center;
           justify-content: center;
           align-items: center;
-          display: flex;
+          /*display: flex;*/
           font-size: 230%;
           color: #fff;
           box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
           transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
@@ -1422,18 +1427,29 @@ img:hover,
           width: 32%;
           top: 730px;
           left: calc(50% - 15%);
+          cursor: pointer;
 }
 
 .Good:hover,
 .Bad:hover,
 .NewWord:hover, .Good:focus,
 .Bad:focus,
-.NewWord:focus {
-          transform: translateY(2px);
+.NewWord:focus{
+          /* transform: translateY(2px); */
           background-color: #388E5f;
 }
 
-
+.goodbad button {
+          margin-bottom: 2%;
+          width: 22%;
+          height: 120px;
+          cursor: pointer;
+            /*background: ;*/
+          font-weight: 500;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 10px;
+}
 
 .Good:active,
 .Bad:active,
@@ -1509,7 +1525,7 @@ img:hover,
           }
 
           .best-container {
-                    left: calc(50% - 20%);
+                    left: calc(50% - 22%);
           }
 
           .score-container,
@@ -1573,13 +1589,13 @@ img:hover,
           .header {
                     color: #061621;
                     font-size: 60px;
-                    padding-left: 5%;
+                    padding-left: 2.5%;
           }
 
           .rules {
-                    font-size: 60px;
-                    width: 2700px;
-                    padding-left: 5%;
+                    font-size: 38px;
+                    width: 80%;
+                    padding-left: 2.5%;
           }
 }
 
@@ -1587,13 +1603,13 @@ img:hover,
           .header {
                     color: #061621;
                     font-size: 30px;
-                    padding-left: 3%;
+                    padding-left: 1.5%;
           }
 
           .rules {
-                    width: 1500px;
-                    font-size: 30px;
-                    padding-left: 3%;
+                    width: 1700px;
+                    font-size: 20px;
+                    padding-left: 1.5%;
           }
 }
 
@@ -1611,13 +1627,13 @@ img:hover,
 
 @media screen and (max-width: 1000px) and (max-height: 1400px) {
           .header {
-                    font-size: 19px;
+                    font-size: 40px;
                     color: #061621;
           }
 
           .rules {
                     text-align: left;
-                    font-size: 15px;
+                    font-size: 26px;
                     width: 90%
           }
 }
@@ -1629,7 +1645,7 @@ img:hover,
           }
 
           .rules {
-                    font-size: 11px;
+                    font-size: 15px;
                     width: 90%;
           }
 }

@@ -66,13 +66,14 @@
 
         .help {
             
-            position: absolute;
-            left: 50%;
-            top: 430px;
-            width: 3000px;
-            max-height: calc(85vh - 5em);
-            overflow: auto;
-            transform: translate(-50%, -50%);
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            /*max-height: calc(85vh - 5em);*/
+            overflow: hidden;
+            /*transform: translate(-50%, -50%);*/
             background: #E4B57C;
             z-index: 12;
             border-radius: 6px;
@@ -81,9 +82,9 @@
         .but {
             margin-top: 25px;
             margin-left: 25px;
-            width: 600px;
-            height: 165px;
-            font-size: 80px;
+            width: 400px;
+            height: 135px;
+            font-size: 60px;
         }
     }
     @media screen and (max-width: 2050px) {
@@ -100,13 +101,14 @@
         }
 
         .help {
-            position: absolute;
-            left: 50%;
-            top: 430px;
-            width: 1700px;
-            max-height: calc(85vh - 5em);
-            overflow: auto;
-            transform: translate(-50%, -50%);
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            /*max-height: calc(85vh - 5em);*/
+            overflow: hidden;
+            /*transform: translate(-50%, -50%);*/
             background: #E4B57C;
             z-index: 12;
             border-radius: 6px;
@@ -134,13 +136,14 @@
         }
         .help {
     
-            position: absolute;
-            left: 50%;
-            top: 430px;
-            width: 1000px;
-            max-height: calc(85vh - 5em) + 100px;
-            overflow: auto;
-            transform: translate(-50%, -50%);
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            /*max-height: calc(85vh - 5em) + 100px;*/
+            overflow: hidden;
+            /*transform: translate(-50%, -50%);*/
             background: #E4B57C;
             z-index: 12;
             border-radius: 6px;
@@ -169,13 +172,14 @@
         }
         .help {
             
-            position: absolute;
-            left: 50%;
-            top: 430px;
+            position: fixed;
+            left: 0px;
+            top: 0px;
             width: 100%;
-            max-height: calc(85vh - 5em) + 100px;
-            overflow: auto;
-            transform: translate(-50%, -50%);
+            height: 100%;
+            /*max-height: calc(85vh - 5em) + 100px;*/
+            overflow: hidden;
+            /*transform: translate(-50%, -50%);*/
             background: #E4B57C;
             z-index: 12;
             border-radius: 6px;
@@ -186,7 +190,7 @@
             margin-top: 5px;
             margin-left: 25px;
             width: 200px;
-            height: 35px;
+            height: 40px;
             font-size: 20px;
         }
     }

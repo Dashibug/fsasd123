@@ -5,6 +5,7 @@ const textToCommand = (texts: string[]) => {
     text = text.toLocaleLowerCase();
 
     let smartapp = ['Английский крокодил'];
+    let changemode = ['режим'];
     let changeword = ['покажи слово', 'новое слово','покажи новое слово','другое слово','поменяй слово','смени слово','покажи другое слово'];
     let helps = ['справка', 'помог', 'помощ', 'как игр', 'научи', 'почему', 'что делать', 'что умеешь', 'правила'];
     let greets = ['привет', 'здравствуй', 'здарова', 'здорова', 'хай', 'хеллоу'];
@@ -19,6 +20,9 @@ const textToCommand = (texts: string[]) => {
     }
     for (let dir of changeword) {
         if (text.includes(dir)) return {type: 'changeword'};
+    }
+    for (let dir of changemode) {
+        if (text.includes(dir)) return {type: 'changemode'};
     }
     for (let dir of close){
         if (text.includes(dir)) return {type: 'close'};
@@ -50,6 +54,7 @@ function* script(r: SberRequest) {
     let count = 0;
     let rsp = r.buildRsp();
     rsp.kbrd = ['Оценить'];
+    let changemodePhrases = ['Сделано!', 'Готово!', 'Новый режим включён!'];
     let changewordPhrases = ['Сделано!', 'Готово!', 'Новое слово на экране!', 'Внимание на экран', 'Слово появилось!'];
     let maleofficialFailPhrases = ['Я пока не выучил эту команду. Лучше скажите «помощь» или нажмите на одноимённую кнопку, возможно, это чем-то поможет', 'Расшифровка этого займет несколько часов. Лучше скажите «помощь» или нажмите на одноимённую кнопку, возможно, это чем-то поможет',
         'Над этим мне нужно подумать. Лучше скажите «помощь» или нажмите на одноимённую кнопку, возможно, это чем-то поможет', 'Разработчики работают над добавлением этой команды. Лучше скажите «помощь» или нажмите на одноимённую кнопку, возможно, это чем-то поможет',
@@ -89,6 +94,10 @@ function* script(r: SberRequest) {
             rsp.data = {type: 'changeword'};
             phraseIndex = Math.floor(Math.random() * changewordPhrases.length);
             rsp.msg = changewordPhrases[phraseIndex];
+        } else if (r.type === 'SERVER_ACTION' && r.act?.action_id === 'changemode') {
+            rsp.data = {type: 'changemode'};
+            phraseIndex = Math.floor(Math.random() * changemodePhrases.length);
+            rsp.msg = changemodePhrases[phraseIndex];
         } else if (r.type === 'SERVER_ACTION' && r.act?.action_id === 'guessedright') {
             rsp.data = {type: 'guessedright'};
             phraseIndex = Math.floor(Math.random() * GuessedRightPhrases.length);

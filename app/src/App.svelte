@@ -1,8 +1,8 @@
 <script lang="ts">
 
     import { onMount } from 'svelte';
-    //import {createSmartappDebugger, createAssistant} from '@sberdevices/assistant-client';
-    import {createSmartappDebugger, createAssistant} from '@salutejs/client';
+    import {createSmartappDebugger, createAssistant} from '@sberdevices/assistant-client';
+    // import {createSmartappDebugger, createAssistant} from '@salutejs/client';
     import { setTheme } from './themes';
     import { logger } from "./utils";
     import {text,background,gradient} from '@salutejs/plasma-tokens'

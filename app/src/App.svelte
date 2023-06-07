@@ -2,7 +2,7 @@
 
     import { onMount } from 'svelte';
     import {createSmartappDebugger, createAssistant} from '@sberdevices/assistant-client';
-    // import {createSmartappDebugger, createAssistant} from '@salutejs/client';
+    //import {createSmartappDebugger, createAssistant} from '@salutejs/client';
     import { setTheme } from './themes';
     import { logger } from "./utils";
     import {text,background,gradient} from '@salutejs/plasma-tokens'
@@ -1259,11 +1259,16 @@
     </div>
 </div>
 
-
-
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap%27');
+
+:global() {
+    overflow: hidden;
+}
+
+:global(html) {
+    overflow: hidden;
+}
 
 :global(body) {
           background-color: rgba(00, 99, 33, 1);
@@ -1588,13 +1593,13 @@ img:hover,
 
           .header {
                     color: #061621;
-                    font-size: 60px;
+                    font-size: 2.8vh;
                     padding-left: 2.5%;
           }
 
           .rules {
-                    font-size: 38px;
-                    width: 80%;
+                    font-size: 2.8vh;
+                    width: 92%;
                     padding-left: 2.5%;
           }
 }

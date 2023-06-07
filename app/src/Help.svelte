@@ -83,8 +83,8 @@
             margin-top: 25px;
             margin-left: 25px;
             width: 400px;
-            height: 135px;
-            font-size: 60px;
+            height: 8vh;
+            font-size: 4vh;
         }
     }
     @media screen and (max-width: 2050px) {

@@ -256,7 +256,6 @@
           "Butter",
           "Pelmeni",
           "Vareniki",
-          "Placenta",
           "Waffles",
           "Pasta",
           "Rice",
@@ -458,7 +457,6 @@
           "Volume",
           "Double bass",
           "Counterfeit",
-          "VAT",
           "Sound",
           "Albino",
           "Freckle",
@@ -466,7 +464,6 @@
           "Noise",
           "Echo",
           "Sciatic nerve",
-          "IVF",
           "Note",
           "Allergy",
           "Forest",
@@ -1610,7 +1607,7 @@ img:hover,
           }
 
           .rules {
-                    width: 92%x;
+                    width: 92%;
                     font-size: 2.8vh;
                     padding-left: 1.5%;
           }
@@ -1618,50 +1615,50 @@ img:hover,
 
 @media screen and (max-width: 1300px) {
           .header {
-                    font-size: 19px;
+                    font-size: 2.5vh;
                     color: #061621;
           }
 
           .rules {
-                    font-size: 19px;
-                    width: 900px;
+                    font-size: 2.5vh;
+                    width: 92%;
           }
 }
 
 @media screen and (max-width: 1000px) and (max-height: 1400px) {
           .header {
-                    font-size: 40px;
+                    font-size: 2.5vh;
                     color: #061621;
           }
 
           .rules {
                     text-align: left;
                     font-size: 26px;
-                    width: 90%
+                    width: 92%;
           }
 }
 
 @media screen and (max-width: 500px) and (max-height: 1000px) {
           .header {
-                    font-size: 16px;
+                    font-size: 2.5vh;
                     color: #061621;
           }
 
           .rules {
                     font-size: 15px;
-                    width: 90%;
+                    width: 92%;
           }
 }
 
 @media screen and (max-width: 400px) and (max-height: 700px) {
           .header {
-                    font-size: 15px;
+                    font-size: 2.5vh;
                     color: #061621;
           }
 
           .rules {
                     font-size: 10px;
-                    width: 90%;
+                    width: 92%;
           }
 }
 

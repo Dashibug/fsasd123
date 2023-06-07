@@ -720,7 +720,6 @@
           "Boxing",
           "Ingrowing toenail",
           "Ground squirrel",
-          "Hemorrhoids",
           "Charisma",
           "Atom",
           "Microbe",
@@ -729,7 +728,6 @@
           "Confident person",
           "Masochist",
           "Bedroom",
-          "Curse word",
           "Gnome",
           "Jester",
           "Diaper",
@@ -1607,13 +1605,13 @@ img:hover,
 @media screen and (max-width: 2050px) {
           .header {
                     color: #061621;
-                    font-size: 30px;
+                    font-size: 2.8vh;
                     padding-left: 1.5%;
           }
 
           .rules {
-                    width: 1700px;
-                    font-size: 20px;
+                    width: 92%x;
+                    font-size: 2.8vh;
                     padding-left: 1.5%;
           }
 }

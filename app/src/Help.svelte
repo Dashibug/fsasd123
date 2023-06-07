@@ -63,7 +63,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
         }
-
+            
         .help {
             
             position: fixed;
